@@ -31,10 +31,10 @@ Watch the full demo of ARVIX here:
 ----
 Team Members
 
-@ [Aliaa-saad](https://github.com/Aliaa-saad)
+ [Aliaa-saad](https://github.com/Aliaa-saad)
 
-@ [Carole Ayman](https://github.com/caroayman21)
+ [Carole Ayman](https://github.com/caroayman21)
 
-@ [Jonathan Medhat](https://github.com/jonathan-medhat)
+ [Jonathan Medhat](https://github.com/jonathan-medhat)
 
-@ [Raghad-Mohamed](https://github.com/Raghad-Mohamed)
+ [Raghad-Mohamed](https://github.com/Raghad-Mohamed)
