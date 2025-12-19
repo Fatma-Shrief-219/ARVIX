@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>ARVIX - Car List</title>
+  <link rel="stylesheet" href="car list2.css" />
+  <script src="scripttt.js" defer></script>
+  <script src="car list.js"></script>
+  <link rel="stylesheet" href="Home.css" />
+</head>
+<body>
+
+  <!-- ---------------- NAV ---------------- -->
+  <nav>
+    <ul>
+      <li><a href="Home.Html">Home</a></li>
+      <li><a href="become an owner.html">Become an owner</a></li>
+      <li><a href="car list2.html" class="active">Car List</a></li>
+      <li><a href="dashboard User.html">Dashboard</a></li>
+      <li><a href="sign in page.html">log out</a></li>
+    </ul>
+    
+  </nav>
+
+  <!-- ---------------- SEARCH ---------------- -->
+  <section class="search-section">
+    <div class="search-container">
+
+      <div class="search-box">
+        <div class="search-content">
+          <label>Pick-up Location</label>
+          <select>
+            <option>Select Location</option>
+            <option>Nasr City</option>
+            <option>Heliopolis</option>
+            <option>Maadi</option>
+            <option>Zamalek</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="search-box">
+        <div class="search-content">
+          <label>Pick-up Date</label>
+          <input type="date" />
+        </div>
+      </div>
+
+      <div class="search-box">
+        <div class="search-content">
+          <label>Return Date</label>
+          <input type="date" />
+        </div>
+      </div>
+      
+      <div class="search-box">
+        <div class="search-content">
+          <label>Time</label>
+          <input type="time" />
+        </div>
+      </div>
+
+      <div class="search-box search-button-box">
+        <button class="search-btn">
+          <i class="fa fa-search"></i> Search
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ---------------- FILTER BAR ---------------- -->
+  <section class="filtration-section">
+    <div class="filters-row">
+
+      <div class="filter-group">
+        <label>Search Car</label>
+        <input type="text" placeholder="Car name" />
+      </div>
+
+      <div class="filter-group">
+        <label>Category</label>
+        <select>
+          <option>All</option>
+          <option>Economy</option>
+          <option>SUV</option>
+          <option>Luxury</option>
+          <option>Sports</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Seats</label>
+        <select>
+          <option>Any</option>
+          <option>2 Seats</option>
+          <option>4 Seats</option>
+          <option>5 Seats</option>
+          <option>7 Seats</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label>Price Range</label>
+        <select>
+          <option>Any Price</option>
+          <option>Under 1000 EGP</option>
+          <option>1000-2000 EGP</option>
+          <option>2000-5000 EGP</option>
+          <option>Over 5000 EGP</option>
+        </select>
+      </div>
+
+      <div class="filter-actions">
+        <button class="apply-filters-btn">Apply Filters</button>
+        <button class="reset-filters-btn">Reset</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ---------------- CAR LIST SECTION ---------------- -->
+  <section class="car-list-section">
+    <div class="car-list-container">
+      <h2>Available Cars</h2>
+      <p class="results-count">Showing 12 cars</p>
+      
+      <div class="cars-grid">
+        
+        <!-- Car Card 1 -->
+        <div class="car-card">
+          <div class="car-image">
+            <img src="Image/Volkswagen Atlas Cross Sport SEL R-Line.jpeg" alt="Mercedes-Benz C-Class" />
+            <div class="car-price">1200 <span>EGP/day</span></div>
+            <div class="free-cancellation">Free Cancellation</div>
+          </div>
+          <div class="car-details">
+            <h3>Mercedes-Benz C-Class</h3>
+            <div class="car-info">
+              <div class="info-item">
+                <i class="fa fa-user"></i>
+                <span>Ahmed Hassan</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-car"></i>
+                <span>Luxury Sedan</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-users"></i>
+                <span>5 Seats</span>
+              </div>
+            </div>
+            <div class="car-features">
+              <span class="feature-tag">Automatic</span>
+              <span class="feature-tag">AC</span>
+              <span class="feature-tag">2022</span>
+            </div>
+            <a href="Payment.html"><button class="rent-btn">Rent Now</button>
+          </div></a>
+        </div>
+
+        <!-- Car Card 2 -->
+        <div class="car-card">
+          <div class="car-image">
+            <img src="Image/renault logan 2017.jpeg" alt="Toyota Corolla" />
+            <div class="car-price">600 <span>EGP/day</span></div>
+            <div class="free-cancellation">Free Cancellation</div>
+          </div>
+          <div class="car-details">
+            <h3>Toyota Corolla</h3>
+            <div class="car-info">
+              <div class="info-item">
+                <i class="fa fa-user"></i>
+                <span>Mohamed Ali</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-car"></i>
+                <span>Economy</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-users"></i>
+                <span>5 Seats</span>
+              </div>
+            </div>
+            <div class="car-features">
+              <span class="feature-tag">Automatic</span>
+              <span class="feature-tag">AC</span>
+              <span class="feature-tag">2021</span>
+            </div>
+            <a href="Payment.html"><button class="rent-btn">Rent Now</button>
+          </div></a>
+        </div>
+
+        <!-- Car Card 3 -->
+        <div class="car-card">
+          <div class="car-image">
+            <img src="Image/daewoo leganza 2000.jpeg" alt="BMW X5" />
+            <div class="car-price">1800 <span>EGP/day</span></div>
+            <div class="no-cancellation">Cancellation Fee</div>
+          </div>
+          <div class="car-details">
+            <h3>BMW X5</h3>
+            <div class="car-info">
+              <div class="info-item">
+                <i class="fa fa-user"></i>
+                <span>Sarah Mahmoud</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-car"></i>
+                <span>SUV</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-users"></i>
+                <span>7 Seats</span>
+              </div>
+            </div>
+            <div class="car-features">
+              <span class="feature-tag">Automatic</span>
+              <span class="feature-tag">AC</span>
+              <span class="feature-tag">2023</span>
+            </div>
+            <a href="Payment.html"><button class="rent-btn">Rent Now</button>
+          </div></a>
+        </div>
+
+        <!-- Car Card 4 -->
+        <div class="car-card">
+          <div class="car-image">
+            <img src="Image/Bmw wallpaper.jpg" alt="Hyundai Elantra" />
+            <div class="car-price">550 <span>EGP/day</span></div>
+            <div class="free-cancellation">Free Cancellation</div>
+          </div>
+          <div class="car-details">
+            <h3>Hyundai Elantra</h3>
+            <div class="car-info">
+              <div class="info-item">
+                <i class="fa fa-user"></i>
+                <span>Omar Ibrahim</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-car"></i>
+                <span>Economy</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-users"></i>
+                <span>5 Seats</span>
+              </div>
+            </div>
+            <div class="car-features">
+              <span class="feature-tag">Manual</span>
+              <span class="feature-tag">AC</span>
+              <span class="feature-tag">2020</span>
+            </div>
+           <a href="Payment.html"><button class="rent-btn">Rent Now</button>
+          </div></a>
+        </div>
+
+        <!-- Car Card 5 -->
+        <div class="car-card">
+          <div class="car-image">
+            <img src="Image/Audi RSQ8.jpeg" alt="Range Rover Sport" />
+            <div class="car-price">2500 <span>EGP/day</span></div>
+            <div class="free-cancellation">Free Cancellation</div>
+          </div>
+          <div class="car-details">
+            <h3>Range Rover Sport</h3>
+            <div class="car-info">
+              <div class="info-item">
+                <i class="fa fa-user"></i>
+                <span>Nour ElDin</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-car"></i>
+                <span>Luxury SUV</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-users"></i>
+                <span>5 Seats</span>
+              </div>
+            </div>
+            <div class="car-features">
+              <span class="feature-tag">Automatic</span>
+              <span class="feature-tag">AC</span>
+              <span class="feature-tag">2022</span>
+            </div>
+            <a href="Payment.html"><button class="rent-btn">Rent Now</button>
+          </div></a>
+        </div>
+
+        <!-- Car Card 6 -->
+        <div class="car-card">
+          <div class="car-image">
+            <img src="Image/2018 Toyota Camry XLE.jpeg" alt="Kia Picanto" />
+            <div class="car-price">400 <span>EGP/day</span></div>
+            <div class="no-cancellation">Cancellation Fee</div>
+          </div>
+          <div class="car-details">
+            <h3>Kia Picanto</h3>
+            <div class="car-info">
+              <div class="info-item">
+                <i class="fa fa-user"></i>
+                <span>Fatma Ahmed</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-car"></i>
+                <span>Compact</span>
+              </div>
+              <div class="info-item">
+                <i class="fa fa-users"></i>
+                <span>4 Seats</span>
+              </div>
+            </div>
+            <div class="car-features">
+              <span class="feature-tag">Manual</span>
+              <span class="feature-tag">AC</span>
+              <span class="feature-tag">2019</span>
+            </div>
+            <a href="Payment.html"><button class="rent-btn">Rent Now</button>
+          </div></a>
+        </div>
+
+      </div>
+      
+      <div class="pagination">
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="page-btn next">Next <i class="fa fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- FOOTER ---------------- -->
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- About Section -->
+      <div class="footer-section about">
+        <h3>About ARVIX</h3>
+        <p>ARVIX is your one-stop car rental platform. Choose from a wide range of cars and enjoy a seamless rental experience with our user-friendly dashboard.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="Home.Html">Home</a></li>
+          <li><a href="sign in page.html">Sign In</a></li>
+          <li><a href="sign up page.Html">Sign Up</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-youtube-play"></i></a>
+          <a href="#"><i class="fa fa-paypal"></i></a>
+        </div>
+
+        <h3>Payment Methods</h3>
+        <div class="payment-icons">
+          <i class="fa fa-cc-visa"></i>
+          <i class="fa fa-cc-mastercard"></i>
+          <i class="fa fa-cc-paypal"></i>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 ARVIX. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

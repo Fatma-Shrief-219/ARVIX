@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Sign Up - ARVIX</title>
+
+  <!-- Use the same CSS as the Sign In page -->
+  <link rel="stylesheet" href="Sign Up.css" />
+  <link rel="stylesheet"href="Sign Up.css">
+  <script src="scripttt.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <ul>
+      <li><a href="ARVIX.Html">Home</a></li>
+      <li><a href="sign in page.html">Sign In</a></li>
+      <li><a href="sign up page.Html">Sign Up</a></li>
+    </ul>
+  </nav>
+  <!-- MAIN SIGN UP CARD (same structure as sign in) -->
+  <main class="signin-page">
+    <div class="signin-card signin-modern">
+
+      <!-- Left panel -->
+      <div class="signin-left">
+        <div class="signin-badge">
+          <i class="fa fa-car"></i>
+          ARVIX
+        </div>
+        <h3>Create your account</h3>
+        <p>Sign up to start renting cars, manage your bookings, and pay securely online.</p>
+        <ul class="signin-benefits">
+          <li><i class="fa fa-check"></i> Easy and fast registration</li>
+          <li><i class="fa fa-check"></i> Save your favorite cars</li>
+          <li><i class="fa fa-check"></i> Secure payments and history</li>
+        </ul>
+      </div>
+
+      <!-- Right panel: form -->
+      <div class="signin-right">
+        <h2>Sign Up</h2>
+        <p class="signin-right-subtitle">
+          Fill in your details to create a new ARVIX account.
+        </p>
+
+        <form id="signUpForm">
+
+          <div class="form-group floating">
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="firstName">First Name</label>
+            <i class="fa fa-user input-icon"></i>
+          </div>
+
+          <div class="form-group floating">
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="lastName">Last Name</label>
+            <i class="fa fa-user input-icon"></i>
+          </div>
+
+          <div class="form-group floating">
+            <input type="email" id="signUpEmail" name="email" required>
+            <label for="signUpEmail">Email address</label>
+            <i class="fa fa-envelope input-icon"></i>
+          </div>
+
+          <div class="form-group floating">
+            <input type="password" id="signUpPassword" name="password" required>
+            <label for="signUpPassword">Password</label>
+            <i class="fa fa-lock input-icon"></i>
+          </div>
+
+          <div class="form-group floating">
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <label for="confirmPassword">Confirm Password</label>
+            <i class="fa fa-lock input-icon"></i>
+          </div>
+
+          <div class="form-group">
+            <label for="drivingLicense" style="font-size:0.85rem; color:#9ca3af;">
+              Driving License (PDF)
+            </label>
+            <input type="file" id="drivingLicense" name="drivingLicense" accept=".pdf" required
+                   style="padding:8px; border-radius:10px; border:1px solid #374151; background:#020617; color:#f9fafb;">
+          </div>
+
+          <div class="form-group">
+            <label for="idCard" style="font-size:0.85rem; color:#9ca3af;">
+              ID Card (PDF)
+            </label>
+            <input type="file" id="idCard" name="idCard" accept=".pdf" required
+                   style="padding:8px; border-radius:10px; border:1px solid #374151; background:#020617; color:#f9fafb;">
+          </div>
+
+          <button id="signUpBtn" type="submit" class="btn-modern">Create Account</button>
+
+          <p id="signUpError" class="error-message" style="display:none;">
+            Please check your data. Passwords must match.
+          </p>
+        </form>
+
+        <div class="form-footer">
+          <p>Already have an account? <a href="sign in page.html">Sign In</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+ <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About ARVIX</h3>
+        <p>Your one-stop car rental platform with a wide selection and seamless experience.</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="ARVIX.Html">Home</a></li>
+          <li><a href="sign in page.html">Sign In</a></li>
+          <li><a href="sign up page.Html">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-youtube-play"></i></a>
+          <a href="#"><i class="fa fa-paypal"></i></a>
+        </div>
+        <h3>Payment Methods</h3>
+        <div class="social-icons">
+          <i class="fa fa-cc-visa"></i>
+          <i class="fa fa-cc-mastercard"></i>
+          <i class="fa fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 ARVIX. All rights reserved.
+    </div>
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+document.getElementById("signUpForm").addEventListener("submit", async function(e) {
+    e.preventDefault(); // يمنع الصفحة من إعادة التحميل
+
+    const form = e.target;
+    const formData = new FormData(form); // يجمع كل الحقول + الملفات
+
+    try {
+        const response = await fetch("http://localhost:3000/api/auth/signup", {
+            method: "POST",
+            body: formData
+        });
+
+        const text = await response.text();
+        alert(text); // هيظهرلك الرد من السيرفر
+    } catch (err) {
+        console.error(err);
+        alert("Error connecting to server");
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+</body>
+</html>

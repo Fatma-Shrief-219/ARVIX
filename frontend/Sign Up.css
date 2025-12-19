@@ -1,0 +1,488 @@
+/* ---------- Global reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ---------- Body (background only on auth pages) ---------- */
+body {
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: #fff;
+}
+
+/* ---------- Navbar (same as ARVIX site) ---------- */
+nav {
+  background-color: #0d1117;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav::before {
+  content: "ARVIX";
+  font-weight: bold;
+  color: #58a6ff;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Main auth layout (Sign In + Sign Up) ---------- */
+.signin-page {
+  min-height: calc(100vh - 160px); /* space for nav + footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+/* Modern two-column auth card */
+.signin-card.signin-modern {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  max-width: 750px;
+  width: 100%;
+  background: radial-gradient(circle at top left, #1f2933, #0b1220);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(88, 166, 255, 0.4);
+  color: #e5e7eb;
+}
+
+/* ---------- Left panel (info) ---------- */
+.signin-left {
+  padding: 24px 22px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.signin-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.25);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.signin-badge i {
+  background: #0f172a;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.signin-left h3 {
+  font-size: 1.4rem;
+  margin-top: 6px;
+}
+
+.signin-left p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.signin-benefits {
+  list-style: none;
+  margin-top: 6px;
+  padding-left: 0;
+  font-size: 0.85rem;
+}
+
+.signin-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.signin-benefits i {
+  font-size: 0.8rem;
+}
+
+/* ---------- Right panel (form) ---------- */
+.signin-right {
+  padding: 22px 24px 18px;
+  background: #0b1220;
+}
+
+.signin-right h2 {
+  margin-bottom: 4px;
+  font-size: 1.35rem;
+}
+
+.signin-right-subtitle {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 16px;
+}
+
+/* ---------- Floating inputs ---------- */
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group.floating {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.form-group.floating input {
+  width: 100%;
+  padding: 11px 38px 9px 12px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #f9fafb;
+  font-size: 0.9rem;
+}
+
+/* Label floats when typing/focus */
+.form-group.floating label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.85rem;
+  color: #6b7280;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* Icon in input */
+.input-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.form-group.floating input:focus + label,
+.form-group.floating input:not(:placeholder-shown) + label {
+  top: 3px;
+  font-size: 0.7rem;
+  color: #58a6ff;
+}
+
+.form-group.floating input:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.5);
+}
+
+/* For file inputs on Sign Up (you applied inline styles, but base here) */
+.form-group input[type="file"] {
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #020617;
+  color: #f9fafb;
+  font-size: 0.85rem;
+}
+
+/* ---------- Row: remember + forgot ---------- */
+.form-row-compact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.forgot-link {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Main auth button ---------- */
+.btn-modern {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #58a6ff, #22c1c3);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.15s ease, opacity 0.15s ease;
+}
+
+.btn-modern:hover {
+  box-shadow: 0 10px 25px rgba(34, 193, 195, 0.35);
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+/* ---------- Divider + social auth ---------- */
+/* .divider {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 10px;
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #1f2937;
+}
+
+.social-login-row {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  flex: 1;
+  border-radius: 999px;
+  border: 1px solid #1f2937;
+  background: #020617;
+  color: #e5e7eb;
+  padding: 8px 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+}
+
+.social-btn i {
+  font-size: 1rem;
+}
+
+.social-btn.google:hover {
+  background: #dc2626;
+  border-color: #b91c1c;
+}
+
+.social-btn.facebook:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+} */
+
+/* ---------- Error message + form footer ---------- */
+.error-message {
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #f97373;
+  text-align: center;
+}
+
+.footer {
+  background: linear-gradient(135deg, #0d1117, #181c2a);
+  color: #fff;
+  padding: 50px 20px 30px;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3 {
+  color: #58a6ff;
+  margin-bottom: 15px;
+  font-size: 20px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.footer-section p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ff6b6b;
+  transform: translateX(5px);
+}
+/*  social  & Payment */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+
+.social-icons,
+.payment-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons i,
+.payment-icons i,
+.social-icons a,
+.payment-icons a {
+  font-size: 28px;           /*  social icons */
+  color: #fff;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons i:hover,
+.payment-icons i:hover,
+.social-icons a:hover,
+.payment-icons a:hover {
+  color: #ff6b6b;
+  transform: scale(1.3) rotate(10deg);
+  text-shadow: 1px 1px 5px rgba(255,255,255,0.5);
+}
+
+
+/*  Footer  */
+.footer {
+  background-color: #0d1117;
+  color: #cdd9e5;
+  padding: 6px 20px;          /* very small top/bottom */
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;                  /* less gap between columns */
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-section h3 {
+  margin-bottom: 4px;         
+  font-size: 14px;
+}
+
+.footer-section p {
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 4px;         
+}
+
+.footer-section ul li a {
+  color: #cdd9e5;
+  text-decoration: none;
+  font-size: 11px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.social-icons a,
+.social-icons i {
+  color: #cdd9e5;
+  font-size: 18px;           
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 4px;          
+  font-size: 11px;
+  color: #6e7681;
+}
+.footer-bottom a {
+  color: #58a6ff;
+  text-decoration: none;
+}
+
+/* ---------- Responsive for small screens ---------- */
+@media (max-width: 700px) {
+  .signin-card.signin-modern {
+    grid-template-columns: 1fr;
+  }
+
+  .signin-left {
+    display: none; /* optional on mobile */
+  }
+}

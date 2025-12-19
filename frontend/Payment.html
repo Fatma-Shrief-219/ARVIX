@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="Payment.css" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="car list.js"></script>
+<title>Payment- ARVIX</title>
+</head>
+<body>
+<header>
+    <div class="logo">ARVIX</div>
+    <nav>
+        <ul>
+            <li><a href="Home.Html">Home</a></li>
+           <li><a href="b.html">Become an Owner</a></li>
+           <li><a href="dashboardQsh.html">Dashboard</a></li>
+        </ul>
+    </nav>
+</header>
+<h2>Payment</h2>
+<form id="payment-form" action="car list.html" method="GET">
+  <div class="section booking-info">
+    <h3>Booking / Rental Information</h3>
+    <p><strong>Car Name:</strong> <span id="car-name">Toyota Camry</span></p>
+    <p><strong>Daily Price:</strong> $<span id="daily-price">50</span></p>
+    <div class="date-inputs">
+      <div>
+        <label for="pickup-date">Pickup Date</label>
+        <input type="date" id="pickup-date" name="pickup-date" required />
+      </div>
+      <div>
+        <label for="return-date">Return Date</label>
+        <input type="date" id="return-date" name="return-date" required />
+      </div>
+    </div>
+    <label for="num-days">Number of Days</label>
+    <div class="days-picker" aria-label="Adjust Number of Days">
+      <button type="button" id="decrement-days" aria-label="Decrease days">−</button>
+      <input type="text" id="num-days" name="num-days" value="1" readonly />
+      <button type="button" id="increment-days" aria-label="Increase days">+</button>
+    </div>
+
+    <label for="total-price">Total Price</label>
+    <input type="text" id="total-price" name="total-price" value="50.00" readonly />
+  </div>
+
+  <div class="section payment-methods">
+    <h3>Select Payment Method</h3>
+    <label><input type="radio" name="payment-method" value="card" id="pay-card" checked> Debit / Credit Card</label>
+    <label><input type="radio" name="payment-method" value="paypal" id="pay-paypal"> PayPal</label>
+    <label><input type="radio" name="payment-method" value="cod" id="pay-cod"> Cash on Delivery</label>
+    <label><input type="radio" name="payment-method" value="vodafone" id="pay-vodafone"> Vodafone Cash / Fawry</label>
+  </div>
+
+  <div id="card-info">
+    <h3>Card Information</h3>
+    <label for="card-number">Card Number</label>
+    <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" pattern="\d{13,19}" required />
+
+    <label for="expiry-date">Expiry Date</label>
+    <input type="month" id="expiry-date" name="expiry-date" required />
+
+    <label for="cvv">CVV</label>
+    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" pattern="\d{3,4}" required />
+
+    <label for="card-name">Name on Card</label>
+    <input type="text" id="card-name" name="card-name" required />
+  </div>
+  <div class="section billing-info">
+    <h3>Billing Info</h3>
+    <label for="bill-name">Name</label>
+    <input type="text" id="bill-name" name="bill-name" placeholder="Full name" required />
+
+    <label for="bill-email">Email</label>
+    <input type="email" id="bill-email" name="bill-email" placeholder="example@mail.com" required />
+
+    <label for="bill-phone">Phone</label>
+    <input type="tel" id="bill-phone" name="bill-phone" placeholder="+20 123 456 7890" required pattern="^\+?\d{7,15}$" />
+
+    <label for="bill-address">Address</label>
+    <input type="text" id="bill-address" name="bill-address" placeholder="Street, City, Country" required />
+  </div>
+  <input type="hidden" id="car-id" name="bookedCar" value="" />
+  <button type="submit">Pay Now</button>
+</form>
+<script src="scripttt.js"></script>
+</body>
+</html>

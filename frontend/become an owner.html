@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Become an Owner - ARVIX</title>
+  <script src="scripttt.js"></script>
+  <link rel="stylesheet" href="Home.css" />
+  <link rel="stylesheet" href="Become an Owner.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+
+  <!-- Navbar (same as homepage) -->
+  <nav>
+    <ul>
+      <li><a href="Home.Html">Home</a></li>
+      <li><a href="car list2.html">Car List</a></li>
+      <li><a href="sign in page.html">Log Out</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main form container -->
+  <main class="owner-main-container signup-style">
+    <h2 style="text-align: center;">Become an Owner</h2>
+    <form id="ownerForm" enctype="multipart/form-data" class="owner-form">
+
+      <div class="form-group">
+        <label for="owner-name">Owner Name</label>
+        <input type="text" id="owner-name" name="owner-name" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="car-image">Upload Car Image</label>
+        <input type="file" id="car-image" name="car-image" accept="image/*" required />
+      </div>
+
+      <div class="form-group">
+        <label for="model">Model</label>
+        <input type="text" id="model" name="model" placeholder="Enter car model" required />
+      </div>
+
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select id="category" name="category" required>
+          <option value="" disabled selected>Select category</option>
+          <option value="economy">Economy</option>
+          <option value="SUV">SUV</option>
+          <option value="luxury">Luxury</option>
+          <option value="sports">Sports</option>
+          <option value="convertible">Convertible</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price (per day)</label>
+        <input type="number" id="price" name="price" min="0" step="0.01" placeholder="e.g. 150" required />
+      </div>
+
+      <div class="form-group">
+        <label for="transmission">Transmission</label>
+        <select id="transmission" name="transmission" required>
+          <option value="" disabled selected>Select transmission</option>
+          <option value="Automatic">Automatic</option>
+          <option value="Manual">Manual</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="seats">Seats</label>
+        <select id="seats" name="seats" required>
+          <option value="" disabled selected>Select number of seats</option>
+          <option value=2>2 seats</option>
+          <option value=4>4 seats</option>
+          <option value=5>5 seats</option>
+          <option value=7>+7 seats</option>
+        </select>
+      </div>
+
+      <fieldset class="checkbox-group">
+        <legend>Policies</legend>
+        <label><input type="checkbox" id="free-cancellation" name="policies" value="Free cancellation" /> Free cancellation</label>
+        <label><input type="checkbox" id="instant-confirmation" name="policies" value="Instant Confirmation" /> Instant Confirmation</label>
+        <label><input type="checkbox" id="unlimited-mileage" name="policies" value="Unlimited Mileage" /> Unlimited Mileage</label>
+        <label><input type="checkbox" id="child-seats" name="policies" value="Child seats" /> Child seats</label>
+        <label><input type="checkbox" id="additional-driver" name="policies" value="Additional Driver" /> Additional Driver</label>
+        <label><input type="checkbox" id="full-insurance" name="policies" value="Full Insurance" /> Full Insurance</label>
+      </fieldset>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </main>
+
+  <!-- Footer (same as homepage) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h3>About ARVIX</h3>
+        <p>Your one-stop car rental platform with a wide selection and seamless experience.</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="Home.Html">Home</a></li>
+          <li><a href="sign in page.html">Sign In</a></li>
+          <li><a href="sign up page.Html">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-youtube-play"></i></a>
+          <a href="#"><i class="fa fa-paypal"></i></a>
+        </div>
+        <h3>Payment Methods</h3>
+        <div class="social-icons">
+          <i class="fa fa-cc-visa"></i>
+          <i class="fa fa-cc-mastercard"></i>
+          <i class="fa fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2025 ARVIX. All rights reserved.</div>
+  </footer>
+  
+</body>
+</html>
