@@ -30,7 +30,11 @@ Watch the full demo of ARVIX here:
 
 ----
 Team Members
+
 @ Aliaa-saad
+
 @ Carole Ayman
+
 @ Jonathan Medhat
+
 @ Raghad-Mohamed
